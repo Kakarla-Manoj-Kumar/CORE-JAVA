@@ -1,0 +1,1616 @@
+----------------------------------------------------
+Hellow World
+----------------------------------------------------
+class HelloWorld{
+   
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+
+	} 
+}
+---------------------------------------------------
+swith statement
+-----------------------------------------------------
+class HelloWorld{
+   
+	public static void main(String[] args) {
+		int n =6;
+        switch(n){
+            case 1:
+                 System.out.println("Monday");
+                 break;
+            case 2:
+                 System.out.println("Tuesday");
+                 break;
+            case 3:
+                 System.out.println("wednesday");
+                 break;
+            case 4:
+                 System.out.println("thursday");
+                 break;
+            case 5:
+                 System.out.println("friday");
+                 break;
+            case 6:
+                 System.out.println("saturday");
+                 break;
+            case 7:
+                 System.out.println("sunday");
+                 break;
+            default:
+                System.out.println("Please give the number between from 1 to 7");
+            
+
+        }
+	} 
+}
+---------------------------------------------------------
+type casting
+---------------------------------------------------------
+class HelloWorld{
+   
+	public static void main(String[] args) {
+		int a= 257;
+		byte b =23;
+		b=(byte)a;
+		System.out.println(b);
+
+	} 
+}
+------------------------------------------------------------
+type conversion
+-----------------------------------------------------------
+class HelloWorld{
+   
+	public static void main(String[] args) {
+		int a= 257;
+		byte b =23;
+		a=b;
+		System.out.println(a);
+
+	} 
+}
+----------------------------------------------------
+while loop inner and out loop working
+----------------------------------------------------
+class HelloWorld{
+   
+	public static void main(String[] args) {
+ 
+        int i=1;
+        while(i<=4){
+            System.out.println("HI Manoj"+i);{
+                int j = 1;
+                while(j<=3){
+                    System.out.println("Hi Charan"+j);{
+                        j++;
+                    }
+                }
+
+            }
+           i++; 
+        }
+
+	} 
+}
+----------------------------------------------------
+For loop inner and out loop working
+----------------------------------------------------
+class HelloWorld{
+   
+	public static void main(String[] args) {
+ 
+        for(int i = 0; i<=3 ;i++){
+            System.out.println("manoj"+i);{
+                for(int j = 0; j<=2;j++){
+                    System.out.println("Charan"+j);
+                }
+            }
+        }
+	} 
+}
+---------------------------------------------------------------------------------------------------------------
+Creating method in one class and using that mettod in another class with the help of object.
+---------------------------------------------------------------------------------------------------------------
+class Calcul {
+    public int mul(int a, int b) {
+    	return a*b;
+    }
+    public int add(int a, int b) {
+    	return a+b;
+    }
+    public int sub(int a, int b) {
+    	return a-b;
+    }
+    public int div(int a, int b) {
+    	return a/b;
+    }
+}
+
+class HelloWorld{
+   
+public static void main(String args[])
+{
+ Calcul Cal = new Calcul();
+	int r1 = Cal.mul(2,3);
+        int r2 = Cal.add(2,3);
+        int r3 = Cal.sub(2,3);
+        int r4 = Cal.div(2,3);
+	System.out.println(r1);
+        System.out.println(r2);
+        System.out.println(r3);
+        System.out.println(r4);
+}
+} 
+---------------------------------------------------------------------------------------------------------------
+Method Overloading 
+---------------------------------------------------------------------------------------------------------------
+class Calcul {
+    public int add(int a, int b) {
+    	return a+b;
+    }
+    public int add(int a, int b,int c) {
+    	return a+b+c;
+    }
+    public long add(long a, long b) {
+    	return a+b;
+    }
+    public long add(long a, long b,long c) {
+    	return a+b+c;
+    }
+    public double add(double a, double b) {
+    	return a+b;
+    }
+    public double add(double a, double b,double c) {
+    	return a+b+c;
+    }
+}
+
+class HelloWorld{
+   
+public static void main(String args[])
+{
+ Calcul Cal = new Calcul();
+		int r1 = Cal.add(22,33);
+        int r3 = Cal.add(22,33,88);
+        long r2 = Cal.add(10000000000000L,2000000000000L);
+        long r4 = Cal.add(10000000000000L,2000000000000L,3000000000000L);
+        double r5 = Cal.add(20.5,30.5);
+        double r6 = Cal.add(20.5,30.5,40.5);
+		System.out.println(r1);
+        System.out.println(r2);
+        System.out.println(r3);
+        System.out.println(r4);
+        System.out.println(r5);
+        System.out.println(r6);
+}
+} 
+-----------------------------------------------------------------------------------------------------------
+Array example with random Math method
+-----------------------------------------------------------------------------------------------------------
+class HelloWorld{
+   
+public static void main(String args[])
+{
+ int manoj[][]= new int [4][4];// two dimensional array
+ for(int i =0 ; i<4 ; i++){
+        for(int j =0 ; j<4 ; j++){
+            manoj[i][j] = (int)(Math.random() * 10);
+            System.out.print(manoj[i][j]+" ");
+        }
+    
+    System.out.println();
+ }
+-------------------------------------------------------------------------------------------
+example 
+* 
+* *
+* * *
+* *
+*
+--------------------------------------------------------------------------------------------
+class HelloWorld{
+   
+public static void main(String args[])
+{
+ int n[][]= new int [5][];//jagged array
+   n[0] = new int [1];
+   n[1] = new int [2];
+   n[2] = new int [3];
+   n[3] = new int [2];
+   n[4] = new int [1];
+ for(int i =0 ; i<n.length; i++){
+        for(int j =0 ; j<n[i].length ; j++){
+            
+            System.out.print("* ");
+        }
+    
+    System.out.println();
+ }
+}
+} 
+------------------------------------------------------------------------------------------------
+Array of a Student
+-----------------------------------------------------------------------------------------------
+class Hello{
+  String name;
+  int roll;
+  int marks;
+
+}
+
+class HelloWorld{
+   
+public static void main(String args[])
+{
+Hello h1 = new Hello();
+h1.name = "manoj";
+h1.roll = 5176;
+h1.marks = 99;
+
+Hello h2 = new Hello();
+h2.name = "mouni";
+h2.roll = 5177;
+h2.marks = 98;
+
+Hello h3 = new Hello();
+h3.name = "charan";
+h3.roll = 5178;
+h3.marks = 99;
+
+Hello n[] = new Hello[3];
+n[0] = h1;
+n[1] = h2;
+n[2] = h3;
+for(int i=0;i<n.length;i++){
+System.out.println(n[i].roll+" : "+n[i].name+" : "+n[i].marks);
+}
+
+/*System.out.println("------------------------------------");
+System.out.println("Roll : Name : Marks");
+System.out.println("------------------------------------");
+System.out.println(h1.roll+" : "+h1.name+" : "+h1.marks);
+System.out.println(h2.roll+" : "+h2.name+" : "+h2.marks);
+System.out.println(h3.roll+" : "+h3.name+" : "+h3.marks);*/
+ 
+}
+} 
+--------------------------------------------------------------------------
+Foe Each Loop or Enhanced Loop
+--------------------------------------------------------------------------
+class Hello{
+  String name;
+  int roll;
+  int marks;
+
+}
+
+class HelloWorld{
+   
+public static void main(String args[])
+{
+Hello h1 = new Hello();
+h1.name = "manoj";
+h1.roll = 5176;
+h1.marks = 99;
+
+Hello h2 = new Hello();
+h2.name = "mouni";
+h2.roll = 5177;
+h2.marks = 98;
+
+Hello h3 = new Hello();
+h3.name = "charan";
+h3.roll = 5178;
+h3.marks = 99;
+
+  Hello h[] = new Hello[3];
+  h[0] = h1;
+  h[1] = h2;
+  h[2] = h3;
+  
+  for(Hello hel : h){
+  System.out.println(hel.roll+" : "+hel.name+" : "+hel.marks);
+  }
+}
+} 
+--------------------------------------------------------------------------
+Printing name and Comparing using string
+--------------------------------------------------------------------------
+class HelloWorld{
+   
+public static void main(String args[])
+{ 
+ 
+ String name;
+ name ="manoj";
+ System.out.println(name);
+String s1 = "Manoj";
+String s2 = "Charan";
+String s3 = "Mouni";
+String s4 = "Manoj";
+String s5 = "Charan";
+String s6 = "Mouni";
+
+ System.out.println(s1==s2);
+  System.out.println(s1==s4);
+   System.out.println(s2==s3);
+    System.out.println(s2==s5);
+     System.out.println(s3==s4);
+      System.out.println(s3==s6);
+
+} 
+} 
+--------------------------------------------------------------------------
+Using String buffer (mutable - changable ) method.
+--------------------------------------------------------------------------
+class HelloWorld{
+   
+public static void main(String args[])
+{ 
+ 
+ StringBuffer name = new StringBuffer ("Manoj");
+ System.out.println(name.length());
+System.out.println(name.insert(5, " Kumar"));
+System.out.println(name.deleteCharAt(0));
+
+
+} 
+} 
+-----------------------------------------------------------------------------
+Type casting StringBuffer to String
+------------------------------------------------------------------------------
+class HelloWorld{
+   
+public static void main(String args[])
+{ 
+ 
+ StringBuffer name = new StringBuffer ("Manoj");
+String n = name.toString();
+System.out.println(n);
+} 
+} 
+
+---------------------------------------------------------------------------------
+Encapsulation
+--------------------------------------------------------------------------------
+Getter method
+--------------------------
+class Mobile{
+  private int age= 23;
+  private String name = "manoj";
+  
+  public int getage(){
+    return age;
+  }
+  public String getname(){
+    return name;
+  }
+}
+
+class HelloWorld{
+   
+public static void main(String args[])
+{ 
+Mobile obj = new Mobile();
+System.out.println(obj.getage());
+System.out.println(obj.getname());
+
+} 
+} 
+--------------------------------------
+Now Getter and Setter methods 
+---------------------------------------
+class Mobile{
+  private int age;
+  private String name;
+  
+  public int getage(){
+    return age;
+  }
+  public void setage(int age){
+      this.age=age;
+  }
+  public String getname(){
+    return name;
+  }
+  public void setname(String name){
+    this.name=name;
+  }
+}
+
+class HelloWorld{
+   
+public static void main(String args[])
+{ 
+Mobile obj = new Mobile();
+obj.setage(23);
+obj.setname("manoj");
+
+System.out.println(obj.getage());
+System.out.println(obj.getname());
+
+} 
+} 
+-------------------------------------------------------------------
+Constuctor
+------------------------------------------------------
+class Mobile{
+  private int age;
+  private String name;
+  
+  public Mobile(){                 //Default Constructor
+    age = 23;
+    name = "manoj";
+  }
+  public Mobile(int age, String name){ //Parametaraized Constructor
+    this.age=age;
+    this.name=name;
+  }
+  public int getage(){
+    return age;
+  }
+  
+  public String getname(){
+    return name;
+  }
+ 
+}
+
+class HelloWorld{
+   
+public static void main(String args[])
+{ 
+Mobile obj = new Mobile();
+Mobile obj1 = new Mobile(22, "mounika");
+Mobile obj2 = new Mobile( );
+
+System.out.println(obj.getage()+":"+obj.getname());
+System.out.println(obj1.getage()+":"+obj1.getname());
+System.out.println(obj2.getage()+":"+obj2.getname());
+
+
+} 
+}
+-------------------------------------------------------------------------------------------
+super method will execute the constructor of super class 
+super () method will call the same default constructor of parent class
+super(6) method will call the same parameterized constructor of parent class
+-------------------------------------------------------------------------------------------
+class A extends Object{
+   public A (){
+    super();
+    System.out.println("in A");
+   }
+   public A(int n){
+    super();
+    System.out.println("int A");
+   }
+}
+
+class B extends A{
+  
+  public B(){
+    super();
+     System.out.println("in B");
+  }
+public B(int  n){
+    super(5);  
+     System.out.println("int B");
+  }
+}
+
+class HelloWorld{
+   
+public static void main(String args[])
+{ 
+B obj1 = new B(5);
+
+} 
+} 
+--------------------------------------------------------------------
+This() method will execute the constructor of same class 
+example:
+in A
+in B
+int B
+--------------------------------------------------------------------
+class A extends Object{
+   public A (){
+    super();
+    System.out.println("in A");
+   }
+   public A(int n){
+    super();
+    System.out.println("int A");
+   }
+}
+
+class B extends A{
+  
+  public B(){
+    super();
+     System.out.println("in B");
+  }
+public B(int  n){
+    this();  
+     System.out.println("int B");
+  }
+}
+
+class HelloWorld{
+   
+public static void main(String args[])
+{ 
+B obj1 = new B(5);
+
+} 
+} 
+--------------------------------------------------------------------
+This() method will execute the constructor of same class 
+example:
+in A
+int A
+int B
+--------------------------------------------------------------------
+class A extends Object{
+   public A (){
+    super();
+    System.out.println("in A");
+   }
+   public A(int n){
+    this();
+    System.out.println("int A");
+   }
+}
+
+class B extends A{
+  
+  public B(){
+    super();
+     System.out.println("in B");
+  }
+public B(int n){
+    super(5);  
+     System.out.println("int B");
+  }
+}
+
+class HelloWorld{
+   
+public static void main(String args[])
+{ 
+B obj1 = new B(5);
+
+} 
+} 
+------------------------------------------------------------------------------------------------------------------
+Naming Conventions
+--------------------------------------------------------------------------------------------------------------------
+All Java Developers must follow Camel Case for Good Practice/Standards for Developing.
+
+-->class and interfaces - Calx, Runnable.
+-->variable and methods - marks, show().
+-->constants - PIE, BRAND.
+
+(Java)-Camel Case -- showMyMarks or ShowMyMarks
+(Other Languages)--Snake case -- show_my_marks or SHOW_MY_MARKS
+------------------------------------------------------------------------------------------------------------------
+Inheritance
+--------------------------------------------------------------------------------------------------------------------
+class Calc {
+
+    public int add(int a, int b){
+
+        return a+b;
+    
+    }
+    public int sub(int a, int b){
+
+        return a-b;
+    
+    }
+
+}
+
+class AdvCalc extends Calc{
+    public int mul(int a, int b){
+
+        return a*b;
+    
+    }
+    public int div(int a, int b){
+
+        return a/b;
+    
+    }
+}
+class VeryAdvCalc extends AdvCalc{
+    public double power(int a, int b){
+
+        return Math.pow(a,b);
+    
+    }
+    
+}
+class HelloWorld{
+   
+public static void main(String args[]){
+
+    VeryAdvCalc ad = new VeryAdvCalc();
+    int r1 = ad.add(2,2);
+    int r2 = ad.sub(2,2);
+    int r3 = ad.mul(2,2);
+    int r4 = ad.div(2,2);
+    int r5 = (int)ad.power(2,2);
+    
+System.out.println("addition is :"+r1+"\nsubstaction is :"+r2+"\nmultiplication is :"+r3+"\ndivision is :"+r4+"\nPower is :"+r5);
+}
+
+} 
+------------------------------------------------------------------------------------------------------------------
+Method Overriding
+--------------------------------------------------------------------------------------------------------------------
+class Father {
+
+    public void  job(){
+
+        System.out.println("Government Job");
+    
+    }
+    public void salary(){
+
+        System.out.println("Future will be So good if u get");
+    
+    }
+}
+
+class Son extends Father{
+
+    public void  job(){
+
+        System.out.println("Software Job");
+    
+    }
+    
+}
+
+
+class HelloWorld{
+   
+public static void main(String args[]){
+
+     Son obj = new Son();
+     obj.salary();
+     obj.job(); 
+}
+
+
+} 
+------------------------------------------------------------------------------------------------------------------
+PolyMorphism 
+--------------------------------------------------------------------------------------------------------------------
+Poly- Many
+Morphism - Behavior
+
+Ex: one method is behavioring differently with different objects is know as polymorphism
+
+there are two types of polymorphisms:
+
+1)Compiletime /Early binding/Overloading Polymorphism.
+which method will execute decided at compile time so, it is called compile time polymorphism.
+
+2)Runtime/Late Binding/Overriding Polymorphism.
+After Compiling we don't know which method will execute , it will decided at run time so it is called runtime polymorphism.
+
+
+Example for Runtime polymorphism
+------------------------------------------------
+class Computer {
+
+    public void  show(){
+
+        System.out.println("this is computer");
+    
+    }
+    
+}
+class Laptop extends Computer {
+
+    public void  show(){
+
+        System.out.println("this is Laptop");
+    
+    }
+    
+}
+class SmartPhone extends Computer{
+
+    public void  show(){
+
+        System.out.println("this is SmartPhone");
+    
+    }
+    
+}
+
+class Main{
+
+    public static void main(String[] args){
+         
+        Computer obj = new Computer();
+         obj.show();
+
+         obj = new Laptop();
+         obj.show();
+
+         obj = new SmartPhone();
+         obj.show();
+    }
+
+}
+------------------------------------------------------------------------------------------------------------------
+Final Key Word
+--------------------------------------------------------------------------------------------------------------------
+final variable --> we can canstant our values withot changing.
+final method --> we can stop others not overriding our methods.
+final class     --> we can stop inheritance of a class withot using others.   
+
+------------------------------------------------------------------------------------------------------------------
+Type casting 
+--------------------------------------------------------------------------------------------------------------------
+ There are two types 
+1) UpCasting 
+2) DownCasting
+
+A obj = new B();
+here,
+A --> reference variable type.
+obj--> reference variable.
+B -->  Reference.
+
+
+Up Casting --> UpCasting is the process of converting a subclass reference to a superclass reference
+
+Down Casting --> DownCasting is the conversion of a superclass reference to a subclass reference
+
+Upcasting and downcasting are essential concepts in object-oriented programming
+
+Example:
+------------------
+
+class A {
+
+    public void  show1(){
+
+        System.out.println("this is A");
+    
+    }
+    
+}
+class B extends A {
+
+    public void  show2(){
+
+        System.out.println("this is B");
+    
+    }
+    
+}
+
+class Main{
+
+    public static void main(String[] args){
+         
+        A obj = new B();//Up Casting 
+         obj.show1();
+
+         B obj1 = (B) obj; //Down Casting 
+         obj1.show2();
+ 
+       
+    }
+
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Wrapper Classes
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Wrapper classes are used to wrap primitive data types such as int, char, etc. into objects. This is useful when working with collections, where only objects can be stored, not primitive data types.
+
+                                                      (Or)
+
+The Wrapper classes in Java are used to convert primitive types (int, char, float, etc) into corresponding objects.
+
+
+Each of the 8 primitive types has corresponding wrapper classes.
+-------------------------------------------------
+Primitive Type     - 	 Wrapper Class
+-------------------------------------------------
+byte	                   -     Byte
+boolean	           -     Boolean
+char	                   -     Character
+double	           -     Double
+float	                   -     Float
+int	                   -     Integer
+long	                   -     Long
+short	                   -     Short
+
+
+1. Autoboxing
+The automatic conversion of primitive types to the object of their corresponding wrapper classes is known as autoboxing. For example – conversion of int to Integer, long to Long, double to Double, etc
+
+int a = 10;
+Integer i = a;
+
+2. Unboxing
+It is just the reverse process of autoboxing. Automatically converting an object of a wrapper class to its corresponding primitive type is known as unboxing. For example – conversion of Integer to int, Long to long, Double to double, etc. 
+
+class WrapperExample {
+    public static void main(String[] args) {
+        // Primitive data type
+        int primitiveInt = 10;
+
+        // Wrapper class object
+        Integer wrapperInt = new Integer(primitiveInt);
+
+        // Auto-boxing (converting primitive type to wrapper type implicitly)
+        Integer autoBoxedInt = primitiveInt;
+
+        // Unboxing (converting wrapper type to primitive type explicitly)
+        int unboxedInt = wrapperInt.intValue();
+
+        // Printing values
+        System.out.println("Primitive int: " + primitiveInt);
+        System.out.println("Wrapper Integer: " + wrapperInt);
+        System.out.println("Auto-boxed Integer: " + autoBoxedInt);
+        System.out.println("Unboxed int: " + unboxedInt);
+    }
+}
+---------------------------------------------------------
+Another useful method is the toString() method, which is used to convert wrapper objects to strings.
+
+In the following example, we convert an Integer to a String, and use the length() method of the String class to output the length of the "string":
+
+class Hello {
+
+    public static void main(String[] args) {
+        
+        Long myLong = 9919005176L;
+        String myString = myLong.toString();
+        System.out.println(myString.length());
+
+    }
+    
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Java abstract Keyword
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The abstract keyword is a non-access modifier, used for classes and methods.
+
+Class: An abstract class is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).
+
+Method: An abstract method can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).	
+
+abstract class Dog{
+    public abstract void run();
+
+    public void bark(){
+        System.out.println("Bow Bow Bow");
+    }
+
+}
+class Ramu extends Dog {
+
+    public void run(){
+        System.out.println("50km/hour");
+    }
+}
+class Solution{
+
+    public static void main(String args[]){
+
+       Dog r = new Ramu();
+        r.run();
+        r.bark();
+
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Inner  Class
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+class Dog {
+    public void bark() {
+        System.out.println("Bow Bow Bow");
+    }
+
+    class Ramu {
+        public void run() {
+            System.out.println("50km/hour");
+        }
+    }
+}
+
+class Solution {
+    public static void main(String args[]) {
+        // Creating an instance of the Dog class
+        Dog d = new Dog();
+        // Invoking the bark method of the Dog class
+        d.bark();
+
+        // Creating an instance of the inner class Ramu using the outer class instance d
+        Dog.Ramu r = d.new Ramu();
+        // Invoking the run method of the inner class Ramu
+        r.run();
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Anonymous Inner  Class
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Java anonymous inner class is an inner class without a name and for which only a single object is created.In simple words, a class that has no name is known as an anonymous inner class in Java. It should be used if you have to override a method of class or interface. Java Anonymous inner class can be created in two ways:
+
+1)Class (may be abstract or concrete).
+2)Interface
+
+by using class example
+-------------------------------
+class A {
+    public void show() {
+        System.out.println("Dog Show");
+    }
+}
+
+class B {
+    public static void main(String[] args) {
+        // Creating an instance of an anonymous inner class based on class A
+        A d = new A() {
+            // Overriding the show() method of class A
+            @Override
+            public void show() {
+                System.out.println("new show");
+            }
+        };
+
+        // Invoking the show() method of the anonymous inner class
+        d.show();
+    }
+}
+by sing interface example
+---------------------------------
+interface A{  
+    void eat();  
+   }  
+   class B{  
+    public static void main(String args[]){  
+    A e=new A(){  
+     public void eat(){System.out.println("nice fruits");}  
+    };  
+    e.eat();  
+    }  
+   }
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Interface
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What are Interfaces in Java?
+An interface in Java is a blueprint of a class. 
+
+There are three types of Interfaces in Java
+1] Normal Interface
+2] Functional Interface /SAM(Single Abstract Method)
+3] Marker Interface
+
+
+Why use Java interface?
+There are mainly three reasons to use interface. They are given below.
+It is used to achieve abstraction.
+By interface, we can support the functionality of multiple inheritance.
+It can be used to achieve loose coupling.
+
+Notes on Interfaces:
+
+1) Like abstract classes, interfaces cannot be used to create objects (in the example above, it is not possible to create an "Animal" object in the MyMainClass)
+2) Interface methods do not have a body - the body is provided by the "implement" class
+3) On implementation of an interface, you must override all of its methods
+4) Interface methods are by default abstract and public
+5) Interface attributes are by default public, static and final
+6) An interface cannot contain a constructor (as it cannot be used to create objects)
+
+interface A{
+
+     void show();
+     void config();
+}
+interface B {
+    void run();
+    
+}
+class X implements A,B{
+
+   
+    public void config() {
+        
+        System.out.println("Config");
+        
+    }
+    public void show() {
+        
+        System.out.println("Show");
+    }
+    
+    public void run() {
+        
+        System.out.println("running");
+        
+    }
+    
+}
+
+class Demo
+{
+    public static void main(String[] args){
+
+        X obj = new X();
+        obj.config();
+        obj.show();
+        obj.run();
+
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Enumeration(enumm for short)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+An enum is a special "class" or a keyword that represents a collection of named constants.
+
+To create an enum, use the enum keyword (instead of class or interface), and separate the constants with a comma. 
+Note that they should be in uppercase letters:
+
+You can access enum constants with the dot syntax:
+ Status s = Status.Success;
+
+-----------------------------------
+Switch Through an Enum
+----------------------------------
+enum Status {
+    Running, Failed, Pending, Success;
+}   
+
+class Demo {
+    public static void main(String[] args) {
+        Status s = Status.Success;
+
+        switch(s) {
+            case Running:
+                System.out.println("All Good");
+                break;
+            case Pending:
+                System.out.println("Please Wait");
+                break;
+            case Failed:
+                System.out.println("Try again");
+                break;
+            default:
+                System.out.println("Done");
+        }
+    }
+}
+--------------------------------
+Loop Through an Enum
+---------------------------------
+enum Status{
+
+    Running, Failed, Pending, Success;
+}   
+
+
+class Demo
+{
+    public static void main(String[] args){
+
+        
+        Status[] a= Status.values();
+        for(Status s: a){
+        System.out.println(s +":"+s.ordinal());
+        }
+
+
+
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Annotations
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Java Annotation is a tag that represents the metadata i.e. attached with class, interface, methods or fields to indicate some additional information which can be used by java compiler and JVM.
+
+
+Built-In Java Annotations used in Java code
+@Override
+@SuppressWarnings
+@Deprecated
+
+
+Types of Annotation
+There are three types of annotations.
+
+Marker Annotation
+Single-Value Annotation
+Multi-Value Annotation
+
+1) Marker Annotation
+An annotation that has no method, is called marker annotation. For example:
+
+The @Override and @Deprecated are marker annotations.
+
+2) Single-Value Annotation
+An annotation that has one method, is called single-value annotation. For example:
+
+3) Multi-Value Annotation
+An annotation that has more than one method, is called Multi-Value annotation. 
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Lamda Expression using Functional Interface and Anonymous Inner Class
+-------------------------------------------------------------------------------------------------------------------------------------
+
+interface A{
+    int add(int i,int j);
+    
+    }
+    class Demo{
+    public static void main(String[] args)
+    {
+        
+         A obj =(i,j) -> i+j;
+         
+        int result = obj.add(4,5);
+        System.out.println(result);
+    }
+    
+    }
+----------------------
+Multiplication
+-------------------------
+
+Before using lamda expression
+---------------------------------
+interface Functional{
+    int Mul(int a, int b);
+}
+class Result{
+
+    public static void main(String[] args){
+        Functional obj = new Functional(){
+            public int Mul(int a, int b){
+                
+                return a*b;
+            }
+        };
+
+        int result = obj.Mul(3,3);
+        System.out.println(result); 
+
+    }
+}
+--------------------------------
+After using lamda expression
+---------------------------------
+interface Functional{
+    int Mul(int a, int b);
+}
+class Result{
+
+    public static void main(String[] args){
+        Functional obj = (a,b)-> a*b;
+        
+        int result = obj.Mul(3,3);
+        System.out.println(result);
+
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Exception Handling 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is Exception in Java?
+
+In Java , an exception is an event that disrupts the normal flow of the program.it is an object which is thrown at runtime.
+
+What is Exception Handling?
+Exception Handling is a mechanism to handle runtime errors such as ClassNotFoundException, IOException, SQLException, RemoteException, etc.
+
+
+Advantage of Exception Handling 
+
+The core advantage of exception handling is to maintain the normal flow of the application. An exception normally disrupts the normal flow of the application; that is why we need to handle exceptions. Let's consider a scenario:
+
+statement 1;  
+statement 2;  
+statement 3;  
+statement 4;  
+statement 5;//exception occurs  
+statement 6;  
+statement 7;  
+statement 8;  
+statement 9;  
+statement 10;  
+
+Suppose there are 10 statements in a Java program and an exception occurs at statement 5; the rest of the code will not be executed, i.e., statements 6 to 10 will not be executed. However, when we perform exception handling, the rest of the statements will be executed. That is why we use exception handling in Java.
+
+Hierarchy of Java Exception classes
+-------------------------------------------------
+The java.lang.Throwable class is the root class of Java Exception hierarchy inherited by two subclasses: Exception and Error. The hierarchy of Java Exception classes is given 
+
+                                                                 Throwable
+                                                                ----------------
+                                                                         ||
+                               ----------------------------------------------------------------------------------
+                               ||                                                                                             ||
+                     1) Exception                                                                                  2)Error
+                     -----------------                                                                                ------------
+                     1)IOException                                                                     1)StackOverFlowError 
+                     2)SqlException                                                                    2)VirtualMachineError
+                     3)ClassNotFoundException                                                  3)OutOfMemoryErrorr
+                     4)RunTimeException-----------||
+                                                                  ||
+                                                             1)ArthematicException
+                                                             2)NumberFormatException
+                                                             3)NullPointerException
+                                                             4)IndexOutOfBoundsException------------||
+                                                                                                                          ||
+                                                                                                  1)ArrayIndexOutOfBoundsException
+                                                                                                  2)StringIndexOutOfBoundsException
+
+
+
+Types of Java Exceptions
+-------------------------------------
+There are mainly two types of exceptions: checked and unchecked. An error is considered as the unchecked exception. However, according to Oracle, there are three types of exceptions namely:
+
+Checked Exception
+Unchecked Exception
+Error
+
+----------------------------------------------------------
+Example program for the Exception Handling
+------------------------------------------------------------
+public class Test {
+    public static void main(String[] args) {
+        int arr[] = {1, 2, 3};
+        int c = 0;
+        int d = 0;
+        String str = null; 
+        
+        System.out.println("HI my name is manoj"); // Print a message
+        
+        try {
+            d = 18 / c; // This will throw an ArithmeticException
+            System.out.println(d);
+            
+            int a = arr[3]; // This will throw an ArrayIndexOutOfBoundsException
+            System.out.println(a);
+            
+            System.out.println(str.length()); // This will throw a NullPointerException
+        } catch (ArithmeticException e) {
+            System.out.println("Cannot divide by 0" + e); // Print an error message for ArithmeticException
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Please know your limit" + e); // Print an error message for ArrayIndexOutOfBoundsException
+        } catch (Exception e) {
+            System.out.println("Something went wrong" + e); // Print an error message for any other exception
+        }
+        
+        System.out.println("Bye"); // Print a message
+    }
+}
+
+->System.out.println("HI my name is manoj"); prints "HI my name is manoj" to the console.
+->Inside the try block, d = 18 / c; throws an ArithmeticException because you cannot divide by zero. So, the control goes to the corresponding catch block and prints "Cannot divide by 0" followed by the exception message (/ by zero).
+->Since an exception occurred before reaching the next statement, the program does not execute the following statements within the try block.
+->The program directly goes to the catch block for ArithmeticException.
+->After handling the exception, the program continues to execute the next statement after the try-catch block, which is System.out.println("Bye"); and prints "Bye" to the console.
+
+So, the expected output of the provided code would be:
+HI my name is manoj
+Cannot divide by 0java.lang.ArithmeticException: / by zero
+Bye
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Throw and Throws Differennce
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------
+Exampke for Throw
+--------------------------
+Java throw keyword is used throw an exception explicitly in the code, inside the function or the block of code
+Using throws keyword, we can declare both checked and unchecked exceptions. However, the throws keyword can be used to propagate checked exceptions only.
+throw is used within the method.	
+We are allowed to throw only one exception at a time i.e. we cannot throw multiple exceptions.
+
+class Div{
+
+    public int div( int a, int b){
+
+        if(b==0){
+            throw new ArithmeticException(" Can't divisible by Zero");
+        }
+        else{
+        return a/b;
+        }
+
+    }
+}
+class Test{
+    public static void main(String[] args){
+
+        System.out.println("Hi Manoj");
+    try{
+       Div d = new Div();
+       System.out.println(d.div(2,0));
+    }catch(Exception e){
+        System.out.println("please provide the correct integer to divis" +e);
+    }
+
+       System.out.println("Bye Manoj");
+        
+    }
+}
+
+-------------------------
+Exampke for Throws
+--------------------------
+Java throws keyword is used in the method signature to declare an exception which might be thrown by the function while the execution of the code.
+Using throws keyword, we can declare both checked and unchecked exceptions. However, the throws keyword can be used to propagate checked exceptions only.
+throws is used with the method signature.
+We can declare multiple exceptions using throws keyword that can be thrown by the method. For example, main() throws IOException, SQLException.
+class Div{
+
+    public int div( int a, int b)throws ArithmeticException {
+
+       
+        return a/b;
+        
+
+    }
+}
+class Test{
+    public static void main(String[] args){
+
+        System.out.println("Hi Manoj");
+    try{
+       Div d = new Div();
+       System.out.println(d.div(2,0));
+    }catch(Exception e){
+        System.out.println("please provide the correct integer to divis"+e );
+    }
+
+       System.out.println("Bye Manoj");
+        
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How to get Input values from the user
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Before 1.5
+--------------
+// Importing necessary classes for input/output operations
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+// Declaring a class named Test
+class Test {
+    // Declaring the main method which can throw NumberFormatException and IOException
+    public static void main(String[] args) throws NumberFormatException, IOException {
+        // Declaring variables to store name and phone number
+        String name;
+        long phon;
+        
+        // Printing a prompt to enter name
+        System.out.println("Enter your name");
+        
+        // Creating an InputStreamReader to read input from System.in
+        InputStreamReader in = new InputStreamReader(System.in);
+        
+        // Creating a BufferedReader to read input lines efficiently
+        BufferedReader br = new BufferedReader(in);
+        
+        // Reading a line of input (name) from the BufferedReader
+        name = br.readLine();
+        
+        // Printing a prompt to enter phone number
+        System.out.println("Enter your phone number");
+        
+        // Reading a line of input (phone number) and parsing it as a long
+        phon = Long.parseLong(br.readLine());
+        
+        // Printing the name and phone number
+        System.out.println(name);
+        System.out.println(phon);
+    }
+}
+------------------
+After 1.5
+-------------------
+import java.io.IOException; // Importing necessary class for IOException handling
+import java.util.Scanner; // Importing Scanner class for user input
+
+class Test {
+    public static void main(String[] args) throws IOException { // Declaring the main method with throws IOException
+        try (Scanner sc = new Scanner(System.in)) { // Initializing Scanner object with try-with-resources
+            System.out.println("Enter your name"); // Prompting user to enter name
+            String name = sc.nextLine(); // Reading user input for name
+
+            System.out.println("Enter the Phone Number"); // Prompting user to enter phone number
+            long phon = sc.nextLong(); // Reading user input for phone number
+
+            System.out.println(name); // Printing the name entered by the user
+            System.out.println(phon); // Printing the phone number entered by the user
+        } // The Scanner object will be automatically closed at the end of the try block
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Threads
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Before introducing the thread concept, we were unable to run more than one task in parallel. It was a drawback, and to remove that drawback, Thread Concept was introduced.
+Java Multithreading is mostly used in games, animation, etc.
+
+Multiprocessing and multithreading, both are used to achieve multitasking.
+
+
+Advantages of Java Multithreading
+
+1) It doesn't block the user because threads are independent and you can perform multiple operations at the same time.
+
+2) You can perform many operations together, so it saves time.
+
+3) Threads are independent, so it doesn't affect other threads if an exception occurs in a single thread.
+
+
+In Java, there are two primary ways to create threads: 
+
+
+1. Extending the Thread class:
+
+You can create a new class that extends the Thread class.
+Inside this class, you define the task you want the thread to perform by overriding the run() method.
+When you create an object of this class and call the start() method on it, it will execute the task in a separate thread.
+
+
+2. Implementing the Runnable interface:
+
+You can create a  class that implements the Runnable interface.
+Inside this class, you define the task you want the thread to perform by implementing the run() method.
+Then, you create a Thread object and pass an instance of your class to it.
+When you call the start() method on this Thread object, it will execute the task in a separate thread.
+
+
+------------------------------------------------------------------
+By Extending Thread class
+------------------------------------------------------------------
+// Define a thread class A that extends Thread
+class A extends Thread {
+    // Override the run method to define the thread's behavior
+    public void run() {
+        // Loop to print "Manoj" 5 times
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Manoj");
+
+            // Pause the thread for 2 milliseconds
+            try {
+                Thread.sleep(2);
+            } catch (InterruptedException e) {
+                // If interrupted while sleeping, print the stack trace of the exception
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+// Define another thread class B that extends Thread
+class B extends Thread {
+    // Override the run method to define the thread's behavior
+    public void run() {
+        // Loop to print "Charan" 5 times
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Charan");
+
+            // Pause the thread for 2 milliseconds
+            try {
+                Thread.sleep(2);
+            } catch (InterruptedException e) {
+                // If interrupted while sleeping, print the stack trace of the exception
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+// Define the main class Test
+class Test {
+    // The main method where the program starts execution
+    public static void main(String[] args) {
+        // Create an instance of thread class A
+        A obj1 = new A();
+        // Create an instance of thread class B
+        B obj2 = new B();
+
+        // Start thread A
+        obj1.start();
+        // Start thread B
+        obj2.start();
+    }
+}
+
+------------------------------------------------------------------
+By Implementing Runnable Interface
+------------------------------------------------------------------
+
+class A implements Runnable {
+
+    public void run() {
+        // Loop to print "Manoj" 5 times
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Manoj");
+
+            try {
+                // Pausing the thread for 2 milliseconds
+                Thread.sleep(2);
+            } catch (InterruptedException e) {
+                // Handling InterruptedException by printing the stack trace
+                e.printStackTrace();
+            }
+        }
+    }
+
+}
+
+class B implements Runnable {
+
+    public void run() {
+        // Loop to print "Charan" 5 times
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Charan");
+
+            try {
+                // Pausing the thread for 2 milliseconds
+                Thread.sleep(2);
+            } catch (InterruptedException e) {
+                // Handling InterruptedException by printing the stack trace
+                e.printStackTrace();
+            }
+        }
+    }
+
+}
+
+class Test {
+    public static void main(String[] args) {
+        // Creating instances of Runnable implementations
+        Runnable r1 = new A();
+        Runnable r2 = new B();
+
+        // Creating Thread objects with Runnable instances
+        Thread t1 = new Thread(r1);
+        Thread t2 = new Thread(r2);
+
+        // Starting threads t1 and t2
+        t1.start();
+        t2.start();
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Threads
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+ 
